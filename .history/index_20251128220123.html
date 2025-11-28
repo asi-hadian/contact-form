@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contact form</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -80,9 +80,10 @@
             </div>
             <div class="radio-group">
               <label class="radio-container">
-                <span class="custom-radio"></span>
+              
                 <input type="radio" name="query_type" value="support" />
-               <sopn></sopn>
+                  <span class="custom-radio"></span>
+               <span class="radio-text"> Support Request</span>
               </label>
             </div>
           </div>
@@ -92,7 +93,7 @@
         <div class="message-box">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" required></textarea>
-          <span id="radio-error" class="error" aria-live="polite"></span>
+          <span id="message-error" class="error" aria-live="polite"></span>
         </div>
 
         <div class="checkbox">
@@ -107,6 +108,6 @@
       </form>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
