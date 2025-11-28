@@ -98,7 +98,7 @@ i {
 }
 /* img shows when it's selected */
 .radio-container input[type="radio"]:checked + .custom-radio {
-  background-image: url("./contact-form-main/assets/images/icon-radio-selected.svg"); /* مسیر عکس */
+  background-image: url("./"); /* مسیر عکس */
   border-color: transparent;
 }
 .radio-container input[type="radio"]:checked {
