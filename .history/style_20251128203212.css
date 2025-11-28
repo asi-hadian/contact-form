@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "karla";
+  src: url("./contact-form-main/assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+body {
+  font-family: "karla", sans-serif;
+  background-color: hsl(148, 38%, 91%);
+}
+.container {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(186, 15%, 59%);
+  width: 600px;
+  /* height: 700px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin: 150px auto;
+  border-radius: 10px;
+  padding: 25px;
+  position: relative;
+}
+input {
+  border: 1px solid hsl(186, 15%, 59%);
+}
+input:f
+h1 {
+  color: hsl(187, 24%, 22%);
+}
+label {
+  font-size: 18px;
+}
+i {
+  font-size: 5px;
+  color: hsl(169, 82%, 27%);
+  margin-left: 10px;
+}
+.input-group {
+  display: flex;
+  margin: 20px auto;
+}
+.input-group .form-field {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+  width: 50%;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+}
+.input-group input {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.input-group .email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.radio-group {
+  border: 1px solid hsl(186, 15%, 59%);
+  margin: 5px;
+  width: 50%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+/* circle befor select */
+.custom-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid hsl(169, 82%, 27%);
+  display: inline-block;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center;
+}
+/* img shows when it's selected */
+.radio-container input[type="radio"]:checked + .custom-radio {
+  background-image: url("/contact-form-main/assets/images/icon-radio-selected.svg"); /* مسیر عکس */
+  border-color: transparent;
+}
+.radio-container input[type="radio"]:checked {
+  background-color: hsl(148, 38%, 91%);
+}
+.radio-group.checked {
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+.radio-group label {
+  margin-left: 10px;
+}
+.radio {
+  display: flex;
+}
+.input-query h2 {
+  margin: 20px auto 10px auto;
+}
+.message-box {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+.message-box label {
+  margin-bottom: 10px;
+}
+.message-box textarea {
+  width: 100%;
+  height: 90px;
+  border-radius: 5px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+}
+.checkbox input {
+  margin-right: 20px;
+}
+button {
+  width: 100%;
+  height: 50px;
+  background-color: hsl(169, 82%, 27%);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  transition: backgrund-color 0.3s ease;
+}
+button:hover {
+  background-color: hsl(169, 89%, 21%);
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 6px;
+}
+.error-field {
+  border: 1px solid red;
+  outline: none;
+}
+
+.success {
+  display: none;
+  width: 400px;
+  height: auto;
+  background-color: hsl(187, 24%, 22%);
+  color: #fff;
+  border: 1px solid #33bb55;
+  padding: 15px;
+  border-radius: 15px;
+  position: absolute;
+  right: 100px;
+  top: -120px;
+}
+.message-title {
+  display: flex;
+  margin: 10px auto;
+}
+
+.message-title p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* --- Mobile Responsive (max-width: 600px یا 480px) --- */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  /* تبدیل تمام گروه‌ها به تک‌ستونه */
+  .input-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input-group .form-field {
+    width: 100%;
+  }
+
+  .input-group .email {
+    width: 100%;
+  }
+
+  /* دکمه‌های رادیویی هم زیر هم */
+  .radio {
+    flex-direction: column;
+  }
+
+  .radio-group {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* textarea */
+  .message-box textarea {
+    height: 120px;
+  }
+
+  /* چک‌باکس */
+  .checkbox {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* پیام موفقیت */
+  .success {
+    width: 90%;
+    right: 5%;
+    top: -100px;
+  }
+}
